@@ -6,9 +6,9 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium import webdriver as web_driver
 
 
-from UPS_Mobile_And_Web.Ups_Tests.Globals import capabilities_mobile, ups_url
-from UPS_Mobile_And_Web.Pages.Help_Center_page import help_center_page
-from UPS_Mobile_And_Web.Pages.dialer_page import dialer_page
+from Mobile_And_Web_Projects.Tests.Globals import capabilities_mobile, ups_url
+from Mobile_And_Web_Projects.Pages.Ups_Help_Center_Page import help_center_page
+from Mobile_And_Web_Projects.Pages.dialer_page import dialer_page
 
 
 class ups_test(unittest.TestCase):
@@ -21,7 +21,6 @@ class ups_test(unittest.TestCase):
         self.web_driver.implicitly_wait(10)
         self.web_driver.maximize_window()
         self.web_driver.get(ups_url)
-        self.web_driver.refresh()
         time.sleep(3)
         self.dialer = dialer_page(mobile_driver)
         self.help_center = help_center_page(self.web_driver)
