@@ -16,7 +16,7 @@ class dialer_page():
         num7 = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/seven')
         num8 = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/eight')
         num9 = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/nine')
-        num0 = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/zero')
+
 
         self.call_button_locator = 'com.google.android.dialer:id/dialpad_voice_call_button'
 
