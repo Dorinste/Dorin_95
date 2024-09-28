@@ -34,7 +34,7 @@ class elal_test(unittest.TestCase):
            self.web_driver.quit()
         print('test end')
 
-    def test_dial_to_elal:(self):
+    def test_dial_to_elal(self):
         number_to_dial = self.help_center.get_number_to_dial()
         self.dialer.click_on_key_pad()
         self.dialer.dial_number(number_to_dial)
