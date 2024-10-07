@@ -11,6 +11,7 @@ from Mobile_And_Web_Projects.Pages.dialer_page import dialer_page
 
 
 
+
 class ups_test(unittest.TestCase):
     def setUp(self) -> None:
         appium_server_url_local = 'http://localhost:4723/wd/hub'
