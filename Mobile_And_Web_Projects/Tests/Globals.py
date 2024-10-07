@@ -11,4 +11,4 @@ capabilities_mobile = dict(
 )
 
 ups_url = 'https://www.ups.com/il/en/support/contact-us.page'
-elal_url = 'https://www.elal.com/eng/help-center,
+elal_url = 'https://www.elal.com/eng/help-center'
