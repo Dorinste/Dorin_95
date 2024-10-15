@@ -12,7 +12,6 @@ class help_center_page():
         print(ups_phone_number)
         ups_num = ups_phone_number.replace('-', '')
         final_num_to_dial = ups_num.replace('+', '')
-        print(final_num_to_dial)
-#to add print about the number
+        print(f'this is UPS final number to dial',final_num_to_dial)
         return final_num_to_dial
 
