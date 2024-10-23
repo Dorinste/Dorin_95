@@ -1,3 +1,5 @@
+import time
+
 from appium.webdriver.common.appiumby import AppiumBy
 
 
@@ -9,36 +11,34 @@ class dialer_page():
         self.call_button_locator = 'com.google.android.dialer:id/dialpad_voice_call_button'
 
     def click_on_key_pad(self):
-        dialer = self.mobile_driver.find_element(by=AppiumBy.ID, value=self.dialer_locator)
-        dialer.click()
-
+        time.sleep(5)
         key_pad = self.mobile_driver.find_element(by=AppiumBy.ID, value=self.key_pad_locator)
         key_pad.click()
 
-    def dial_numer(self, num_to_dial):
+    def dial_number(self, num_to_dial):
         print(f'dialing to number ', num_to_dial)
         for digit in num_to_dial:
-            print(f'Trying to click on digit '.digit)
+            print(f'Trying to click on digit ',digit)
             match digit:
-                case 1:
+                case '1':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/one')
-                case 2:
+                case '2':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/two')
-                case 3:
+                case '3':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/three')
-                case 4:
+                case '4':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/four')
-                case 5:
+                case '5':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/five')
-                case 6:
+                case '6':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/six')
-                case 7:
+                case '7':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/seven')
-                case 8:
+                case '8':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/eight')
-                case 9:
+                case '9':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/nine')
-                case 0:
+                case '0':
                     num = self.mobile_driver.find_element(by=AppiumBy.ID, value='com.google.android.dialer:id/zero')
             num.click()
 

@@ -34,8 +34,9 @@ class ups_test(unittest.TestCase):
         print('test end')
 
     def test_dial_to_ups(self):
+        final_num = self.help_center.get_number_to_dial()
         self.dialer.click_on_key_pad()
-        self.dialer.dial_number()
+        self.dialer.dial_number(final_num)
         self.dialer.click_on_call_button()
 
 
