@@ -9,8 +9,6 @@ from Mobile_And_Web_Projects.Pages.Ups_Help_Center_Page import help_center_page
 from Mobile_And_Web_Projects.Pages.dialer_page import dialer_page
 
 
-
-
 class ups_test(unittest.TestCase):
     def setUp(self) -> None:
         appium_server_url_local = 'http://localhost:4723/wd/hub'
@@ -38,6 +36,7 @@ class ups_test(unittest.TestCase):
         self.dialer.click_on_key_pad()
         self.dialer.dial_number(final_num)
         self.dialer.click_on_call_button()
+        self.dialer.click_on_hang_up()
 
 
 

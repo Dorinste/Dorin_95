@@ -1,7 +1,5 @@
 import time
-
 from appium.webdriver.common.appiumby import AppiumBy
-
 
 class dialer_page():
     def __init__(self, mobile_driver):
@@ -9,9 +7,9 @@ class dialer_page():
         self.dialer_locator = 'com.google.android.apps.nexuslauncher:id/overview_actions_view'
         self.key_pad_locator = 'com.google.android.dialer:id/dialpad_fab'
         self.call_button_locator = 'com.google.android.dialer:id/dialpad_voice_call_button'
-
+        self.hanging_up_locator = 'com.google.android.dialer:id/incall_end_call'
     def click_on_key_pad(self):
-        time.sleep(5)
+        time.sleep(3)
         key_pad = self.mobile_driver.find_element(by=AppiumBy.ID, value=self.key_pad_locator)
         key_pad.click()
 
@@ -45,3 +43,7 @@ class dialer_page():
     def click_on_call_button(self):
         call_button = self.mobile_driver.find_element(by=AppiumBy.ID, value=self.call_button_locator)
         call_button.click()
+
+    def click_on_hang_up(self):
+        hanging_up = self.mobile_driver.find_element(by=AppiumBy.ID,value=self.hanging_up_locator)
+        hanging_up.click()
