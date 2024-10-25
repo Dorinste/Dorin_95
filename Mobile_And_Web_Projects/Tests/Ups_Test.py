@@ -28,7 +28,7 @@ class ups_test(unittest.TestCase):
         if self.mobile_driver:
             self.mobile_driver.quit()
         if self.web_driver:
-           self.web_driver.quit()
+            self.web_driver.quit()
         print('test end')
 
     def test_dial_to_ups(self):
