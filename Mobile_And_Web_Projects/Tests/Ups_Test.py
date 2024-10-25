@@ -12,7 +12,7 @@ from Mobile_And_Web_Projects.Pages.dialer_page import dialer_page
 class ups_test(unittest.TestCase):
     def setUp(self) -> None:
         appium_server_url_local = 'http://localhost:4723/wd/hub'
-        self.mobile_driver = webdriver.Remote(appium_server_url_local,capabilities_mobile)
+        self.mobile_driver = webdriver.Remote(appium_server_url_local, capabilities_mobile)
         self.mobile_driver.implicitly_wait(10)
         service = ChromeService(executable_path=ChromeDriverManager().install())
         self.web_driver = web_driver.Chrome(service=service)
@@ -37,7 +37,3 @@ class ups_test(unittest.TestCase):
         self.dialer.dial_number(final_num)
         self.dialer.click_on_call_button()
         self.dialer.click_on_hang_up()
-
-
-
-

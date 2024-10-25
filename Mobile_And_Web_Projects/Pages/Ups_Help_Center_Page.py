@@ -1,11 +1,8 @@
 from selenium.webdriver.common.by import By
-from Mobile_And_Web_Projects.Pages.locators import HelpCenterLocators
-
 
 class help_center_page():
     def __init__(self, web_driver):
         self.web_driver = web_driver
-
 
     def get_number_to_dial(self):
         contacts = self.web_driver.find_elements(By.CLASS_NAME, 'ups-analytics.ups-cta.ups-cta-secondary')
@@ -17,8 +14,3 @@ class help_center_page():
         print(f'this is UPS final number to dial', final_num_to_dial)
 
         return final_num_to_dial
-
-
-
-
-
