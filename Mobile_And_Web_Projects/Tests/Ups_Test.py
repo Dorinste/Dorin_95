@@ -19,7 +19,7 @@ class ups_test(unittest.TestCase):
         self.web_driver.implicitly_wait(10)
         self.web_driver.maximize_window()
         self.web_driver.get(ups_url)
-        time.sleep(3)
+        time.sleep(3)     #add sleep to solve Sync. issues between mobile and web
         self.dialer = dialer_page(self.mobile_driver)
         self.help_center = help_center_page(self.web_driver)
         print('test start')
@@ -36,4 +36,4 @@ class ups_test(unittest.TestCase):
         self.dialer.click_on_key_pad()
         self.dialer.dial_number(final_num)
         self.dialer.click_on_call_button()
-        self.dialer.click_on_hang_up()
+        self.dialer.click_on_hang_up(5)

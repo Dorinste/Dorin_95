@@ -11,7 +11,7 @@ class dialer_page:
         self.hanging_up_locator = 'com.google.android.dialer:id/incall_end_call'
 
     def click_on_key_pad(self):
-        time.sleep(3)
+        time.sleep(3)       #add sleep since smart sleep doesn't solve the stability issues
         key_pad = self.mobile_driver.find_element(by=AppiumBy.ID, value=self.key_pad_locator)
         key_pad.click()
 
@@ -45,7 +45,10 @@ class dialer_page:
     def click_on_call_button(self):
         call_button = self.mobile_driver.find_element(by=AppiumBy.ID, value=self.call_button_locator)
         call_button.click()
-
-    def click_on_hang_up(self):
+        print('succeeded click on call button')
+    def click_on_hang_up(self,ending_call_timer=3):
         hanging_up = self.mobile_driver.find_element(by=AppiumBy.ID, value=self.hanging_up_locator)
+        time.sleep(ending_call_timer)
         hanging_up.click()
+        print('succeeded click on hang_up_button')
+
